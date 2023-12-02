@@ -1,38 +1,53 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes cambioDeColorBoton {
+  0%   {background-color: #dfd9d9;} /* Gris claro */
+  25%  {background-color: #a5a5a5;} /* Gris medio-claro */
+  50%  {background-color: #4a4c4e;} /* Gris oscuro */
+  75%  {background-color: #242526;} /* Casi negro */
+  100% {background-color: #9e9e9e;} /* Gris medio */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+  padding-right: 22px;
+  padding-left: 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+      /* Gradiente lineal de arriba a abajo, mezclando gris y blanco */
+      background: linear-gradient(to bottom,#ffffff,#9e9e9e);
+
+      /* Estilos adicionales para el texto y otros elementos si lo necesitas */
+      color: #333333;
+
+}
+button{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   color: white;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.btn1{
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  /* Aplicar la animación */
+  animation: cambioDeColorBoton 5s infinite ease-in-out;
+
+}
+button:hover{transform: scale(1.05);}
+
+.btn0{
+  background-color: rgb(128, 32, 0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Boxmenu{
+  height: 83.79vh;
+  position: relative;
+  background-color: #333333;
+}
+
+.Boxperfil{
+  margin-top: 40px;
 }
